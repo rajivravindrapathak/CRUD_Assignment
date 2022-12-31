@@ -1,12 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+// import { Link } from 'react-router-dom'
 
-const CreatenewissuePage = () => {
+const CreatenewissuePage = ({ handleAdd }) => {
+
+    const [text, setText] = useState([])
+
     return (
         <div className='container'>
-            <input placeholder='title' /><br />
-            <textarea placeholder='description' /><br />
-            <button className='saveButton'><Link>save</Link></button>
+            <input type='text' placeholder='title' /><br />
+            <textarea placeholder='description' onChange={(e) => {
+                setText(e.target.value)
+            }} /><br />
+            <button className='saveButton' 
+            onClick={() => {
+                handleAdd(text)
+                fetch("http://localhost:8080/tasks", {
+                    method: "POST",
+                    body: JSON.stringify({ title: text, purchased: false }),
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                })
+             }} 
+            >save</button>
         </div>
     )
 }
