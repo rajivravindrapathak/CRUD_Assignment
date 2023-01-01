@@ -20,7 +20,7 @@ const HomePage = () => {
             <p>homepage</p>
             <div className="Divtodo">
                 { todos.map((e) => (
-                    <HomedetailPage  todo={e} key={e.id}  />
+                    <HomedetailPage todo={e} key={e.id}  />
                    
                 ))}
             </div>

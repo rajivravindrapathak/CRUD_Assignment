@@ -1,11 +1,12 @@
 import './App.css';
-import AllRoutes from './Components/AllRoutes';
-import CreatenewissuePage from './Components/CreatenewissuePage';
+import HomePage from './Components/HomePage';
 
 function App() {
   return (
     <div className="App">
-     <AllRoutes />
+   
+     <HomePage />
+   
     </div>
   );
 }

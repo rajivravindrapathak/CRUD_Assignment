@@ -8,10 +8,10 @@ const AllRoutes = () => {
 
     return (
         <>
-            <CreatenewissuePage />
+            {/* <HomePage />
             <Routes>
-                <Route path='/homepage' element={<HomePage />} />
-            </Routes>
+                <Route path='/homepage' element={<CreatenewissuePage />} />
+            </Routes> */}
         </>
     )
 }
