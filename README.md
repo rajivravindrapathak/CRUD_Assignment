@@ -1,6 +1,6 @@
 ### Issue Board
 
-Issue board is simple angular app to create/edit/delete/view issue.
+Issue board is React app to create/edit/delete/view issue Using Json-server(Rest api) or deployed api(mongoDb and nodejs) and axios(fetch).
 
 ### Requirements:
 
@@ -27,4 +27,4 @@ If I click the delete button, it will delete the issue and remove it from the UI
 
 ### Data Storage
 
-You can store the data in the local storage. It is preferrable to use AngularJS factory/service to add/update/delete issue data.
+you can do using Axios or fetch, json server. Like CRUD(Create, Read, Update(Edit), Delete).
