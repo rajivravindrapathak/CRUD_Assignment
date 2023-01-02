@@ -2,29 +2,53 @@
   text-align: center;
 }
 
+.navDiv {
+  width: 100%;
+  height: 40px;
+  margin-top: 0;
+  background-color: teal;
+  /* color: white; */
+  font-style: inherit;
+}
+
+.navDiv > h2 {
+  text-align: center;
+  justify-content: center;
+}
+
 input {
   width: 270px;
   height: 35px;
-  margin: 8px;
+  margin-bottom: 8px;
 }
 
 textarea {
   width: 270px;
   height: 45px;
-  margin: 8px;
+  margin-bottom: 8px;
 }
 
-.container {
-  margin: 25px;
-}
 
 .saveButton {
   width: 280px;
   height: 40px;
   text-decoration: none;
-  background-color: rgb(31, 219, 219);
+  background-color: rgb(6, 136, 136);
   color: white;
   border: none;
   font-size: 25px;
   font-weight: bolder;
+}
+
+.mapDiv > button {
+  width: 150px;
+  height: 40px;
+  text-decoration: none;
+  background-color: rgb(6, 136, 136);
+  color: white;
+  border: none;
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 5px;
+  border-radius: 5px;
 }

@@ -1,28 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CreatenewissuePage from './CreatenewissuePage'
-import HomedetailPage from './HomedetailPage'
+// import HomedetailPage from './HomedetailPage'
 
 const HomePage = () => {
 
     const [todos, setTodos] = useState([])
 
-    // const addTodo = (data) => {
-    //     const t = {
-    //         id: 1,
-    //         title: data,
-    //         status: false
-    //     }
-    //     setTodos([...todos, t])
-    // }
+    useEffect(() => {
+        fetchData();
+      },[])
+
+    const fetchData = () => {
+
+      return fetch("http://localhost:8080/tasks")
+            .then((res) => res.json())
+            .then((data) => setTodos(data));
+    }
 
     return (
         <div>
-            <p>homepage</p>
+            <h3>homepage</h3>
             <div className="Divtodo">
                 { todos.map((e) => (
-                    <HomedetailPage todo={e} key={e.id}  />,
-                    {/* <button>Edit</button>,
-                    <button>Delete</button> */}
+                    <div className='mapDiv'>
+                        <span>Title: {e.title}</span>,
+                        <span> desccription: {e.desccription}</span>
+                        <button >edit</button>
+                        <button>delete</button> 
+                    </div>
+                    
                 ))}
             </div>
            
@@ -31,3 +37,4 @@ const HomePage = () => {
 }
 
 export default HomePage
+// {/* <HomedetailPage todo={e} key={e.id}  />, */}
