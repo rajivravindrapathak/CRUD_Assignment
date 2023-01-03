@@ -17,16 +17,25 @@ const HomePage = () => {
             .then((data) => setTodos(data));
     }
 
+    const Edit = () => {
+          
+    }
+
+    const Delete = () => {
+
+    }
+
     return (
         <div>
+
             <h3>homepage</h3>
             <div className="Divtodo">
                 { todos.map((e) => (
                     <div className='mapDiv'>
                         <span>Title: {e.title}</span>,
                         <span> desccription: {e.desccription}</span>
-                        <button >edit</button>
-                        <button>delete</button> 
+                        <button onClick={Edit} >edit</button>
+                        <button onClick={Delete}>delete</button> 
                     </div>
                     
                 ))}
@@ -37,4 +46,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-// {/* <HomedetailPage todo={e} key={e.id}  />, */}
